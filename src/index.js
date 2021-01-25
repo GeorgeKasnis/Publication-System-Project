@@ -45,11 +45,11 @@ const getPubs = async () => {
       counter++;
     }
 
-    document.querySelector("#org1").innerHTML = ` Org1 Pubilications: ${counterOrg1}`;
-    document.querySelector("#org2").innerHTML = ` Org2 Pubilications: ${counterOrg2}`;
-    document.querySelector("#org3").innerHTML = ` Org3 Pubilications: ${counterOrg3}`;
-    document.querySelector("#org4").innerHTML = ` Org4 Pubilications: ${counterOrg4}`;
-    document.querySelector("#org5").innerHTML = ` Org5 Pubilications: ${counterOrg5}`;
+    document.querySelector("#org1").innerHTML = ` Org1 Publications: ${counterOrg1}`;
+    document.querySelector("#org2").innerHTML = ` Org2 Publications: ${counterOrg2}`;
+    document.querySelector("#org3").innerHTML = ` Org3 Publications: ${counterOrg3}`;
+    document.querySelector("#org4").innerHTML = ` Org4 Publications: ${counterOrg4}`;
+    document.querySelector("#org5").innerHTML = ` Org5 Publications: ${counterOrg5}`;
 
     document.querySelector("#lastitem").innerHTML = `
       <a  class="nav-link" id="lastlink" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
