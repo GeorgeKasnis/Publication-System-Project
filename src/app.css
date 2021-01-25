@@ -1,0 +1,159 @@
+body {
+  background: rgb(144, 231, 141);
+  background: linear-gradient(
+    90deg,
+    rgba(144, 231, 141, 1) 0%,
+    rgba(155, 172, 140, 1) 0%,
+    rgba(120, 151, 124, 1) 50%,
+    rgba(174, 207, 179, 1) 95%
+  );
+  color: rgb(21, 29, 22);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.navbar {
+  background: rgb(234, 253, 234) !important;
+  box-shadow: 0 10px 20px -20px;
+}
+.navbar-brand {
+  transform: scale(1.4);
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-family: "Libre Baskerville", serif;
+  border-right: 0.1rem solid rgb(50, 61, 50);
+}
+.navbar-nav {
+  padding-left: 10px;
+  width: 100%;
+}
+.nav-item {
+  font-size: large;
+  margin: 0 auto;
+}
+#lastlink {
+  align-self: flex-end !important;
+  font-size: large;
+  letter-spacing: 1px;
+  margin-left: 10rem;
+}
+
+.dropdown-menu {
+  margin-top: 9px;
+  background: rgb(240, 255, 242) !important;
+  border: none;
+  box-shadow: rgb(198, 214, 198) 1px 1px 10px 0.1px;
+}
+.dropdown-item:hover {
+  background-color: rgb(198, 214, 198);
+  color: rgb(95, 141, 104);
+}
+a.nav-link {
+  color: rgb(21, 29, 22) !important;
+  font-family: "Libre Baskerville", serif;
+}
+a.nav-link:hover {
+  color: rgb(95, 141, 104) !important;
+}
+.form-control {
+  border: 1px solid rgba(174, 207, 179, 1);
+}
+#submitBtn,
+#closeBtn {
+  background-color: rgb(209, 236, 209);
+  color: rgb(21, 29, 22);
+  font-weight: bold;
+
+  border: 1px solid rgb(198, 214, 198);
+}
+#submitBtn:hover,
+#closeBtn:hover {
+  background-color: rgb(95, 141, 104);
+}
+#myh1 {
+  font-family: "Libre Baskerville", serif;
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-decoration: 2px solid rgb(50, 61, 50) underline;
+  cursor: default;
+}
+.card {
+  width: 400px;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  height: 380px;
+  border: 2px solid rgb(209, 218, 209);
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(234, 253, 234);
+}
+
+.card-title {
+  font-family: "Libre Baskerville", serif;
+  border-bottom: 1px solid rgb(50, 61, 50);
+}
+
+.card-text {
+  padding-right: 4px;
+  padding-left: 4px;
+  height: 12rem;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  background-color: rgb(232, 248, 232);
+  border-radius: 10px;
+}
+
+#pubbtn {
+  background-color: rgb(209, 236, 209);
+  color: rgb(21, 29, 22);
+  font-weight: bold;
+
+  border: 1px solid rgb(198, 214, 198);
+}
+#pubbtn:hover {
+  background-color: rgb(95, 141, 104);
+}
+button.btn:focus {
+  box-shadow: none;
+}
+
+#cardfooter {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#footerspan {
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 2px;
+}
+#time {
+  font-size: small;
+  letter-spacing: 1px;
+  align-self: center;
+  font-weight: 600;
+}
+.footer {
+  width: 100%;
+  order: 2;
+  margin-top: 50px;
+  background-color: #d1ecd1 !important;
+  box-shadow: 0 -5px 5px -5px #333;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    margin: initial;
+  }
+  .nav-item {
+    margin: initial;
+  }
+  #lastlink {
+    margin-left: initial;
+  }
+}

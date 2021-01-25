@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/app.css" type="text/css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar " class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">N.P.S</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add Publication </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Organizations
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#" id="org1"></a></li>
+                <li><a class="dropdown-item" href="#" id="org2"></a></li>
+                <li><a class="dropdown-item" href="#" id="org3"></a></li>
+                <li><a class="dropdown-item" href="#" id="org4"></a></li>
+                <li><a class="dropdown-item" href="#" id="org5"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item" id="lastitem"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Navbar -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Add Publication</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="mydiv">
+              <form
+                method="POST"
+                id="myForm"
+                action="https://intern-proj-14dbc-default-rtdb.europe-west1.firebasedatabase.app/.json"
+              >
+                <div class="form-group">
+                  <input id="Title" name="Title" class="form-control" placeholder="Title" required />
+                  <input id="AuthorName" name="AuthorName" class="form-control" placeholder="Author" required />
+                  <input id="pubDate" name="pubDate" class="form-control" type="date" placeholder="Date" required />
+                  <label for="exampleFormControlTextarea1" class="form-label mt-4">Publication Area</label>
+                  <textarea name="pubArea" class="form-control" id="pubArea" rows="3" required></textarea>
+                  <div class="form-group">
+                    <label for="organization" required>Organization</label>
+                    <select name="organization" class="form-control" id="organization">
+                      <option>Org1</option>
+                      <option>Org2</option>
+                      <option>Org3</option>
+                      <option>Org4</option>
+                      <option>Org5</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary btn-md mt-4" id="submitBtn">Submit</button>
+                  <p id="log" class="text-success mt-2"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="closeBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--/modal -->
+
+    <h1 class="text-center" id="myh1">National Publication System</h1>
+
+    <!-- FOOTER -->
+
+    <footer class="footer text-center text-lg-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias. Fugiat pariatur
+              maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est atque cumque eum delectus
+              sint!
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias. Fugiat pariatur
+              maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est atque cumque eum delectus
+              sint!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">GeorgeKas.com</a>
+      </div>
+      <!-- /Copyright -->
+    </footer>
+
+    <!-- /FOOTER -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./dist/main.js" type="module"></script>
+  </body>
+</html>
